@@ -1,7 +1,9 @@
-#LIBRARIES:
+1#LIBRARIES:
 ###########
 import webbrowser
 from IPython.display import Image
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
 # define rooms and items
 
@@ -218,8 +220,11 @@ def show_room_image(room):
     """
     Function to open images from .\Img\ folder
     """
-    path = ".\Img\\" + room["image"]
-    display(Image(filename = path, width=300, height=300)) 
+    path = "C:\Users\amara\OneDrive\Ironhack\Img\\" + room["image"]
+    #display(Image(filename = path, width=300, height=300)) 
+    img = mpimg.imread(path)
+    imgplot = plt.imshow(img)
+    plt.show()
         
 
 def get_next_room_of_door(door, current_room):
