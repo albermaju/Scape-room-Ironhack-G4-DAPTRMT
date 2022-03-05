@@ -1,4 +1,4 @@
-1#LIBRARIES:
+#LIBRARIES:
 ###########
 import webbrowser
 from IPython.display import Image
@@ -220,7 +220,7 @@ def show_room_image(room):
     """
     Function to open images from .\Img\ folder
     """
-    path = "C:\Users\amara\OneDrive\Ironhack\Img\\" + room["image"]
+    path = r".\Img" +'\\'+ room["image"]
     #display(Image(filename = path, width=300, height=300)) 
     img = mpimg.imread(path)
     imgplot = plt.imshow(img)
